@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Box</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.23.1" />
+
+	<script type='text/javascript' src='js/jquery.js'></script>
+	<script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+	<script type='text/javascript' src='js/jquery-ui.js'></script>
+	<link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link href="css/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/ui.datepicker.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/validate.js"></script>
+	<script type="text/javascript" src="js/ui.datepicker-it.js"></script>
+	<script type="text/javascript" src="js/ui.datepicker-en.js"></script>
+	<script type="text/javascript" src="js/ui.datepicker-fr.js"></script>
+	<script type="text/javascript" src="js/ui.datepicker-de.js"></script>
+	<script>
+		/* INSERIRE QUI IL CODICE HOTEL */
+		var codice_hotel='giesse-hotel';
+	</script>
+
+</head>
+
+<body>
+
+</body>
+
+	<script>
+			function validate() {
+
+				if (document.getElementById('Text1').value == "" || document.getElementById('Text2').value == "") {
+					alert("Seleziona i campi nel calendario!");
+					return;
+				}
+				if (document.getElementById('Text3').value == "") {
+					alert("Seleziona il numero delle persone!");
+					return;
+				}
+				window.open('https://booking.htlbooking.net/'+codice_hotel+'?dateA=' + document.getElementById('Text1').value + '&dateP=' + document.getElementById('Text2').value + '&adulti=' + document.getElementById('Text3').value + '&lingua=' + 'it');
+			}
+		</script><style>
+			.widget-solutyon-booking-engine input[type="button"] {
+				background: #c1af98;
+			}
+			.widget-solutyon-booking-engine input[type="button"]:hover {
+				background: #6f5643;
+			}
+			.widget-solutyon-booking-engine .copyright a, .widget-solutyon-booking-engine .copyright a:hover {
+				color:#5e4236 !important;
+			}</style>
+
+		<div class="widget-solutyon-booking-engine" style="border-color:;">
+			<div class="header_text" style="color:#5e4236">Prenota direttamente online le nostre offerte vantaggiose</div>
+			<form action="#" class="booking_form">
+				<div class="prenotazione_title" style="color:#5e4236">Prenotazione Online</div>
+				<table class="form_table">
+					<tr>
+						<td style="width:40%">Data arrivo:</td>
+						<td><input id="Text1" type="date" /></td>
+					</tr>
+					<tr>
+						<td style="width:40%">Data partenza:</td>
+						<td><input id="Text2" type="date" /></td>
+					</tr>
+
+					<tr>
+						<td style="width:40%">Persone:</td>
+						<td><input id="Text3" type="number" style="width:35px" value="2"/></td>
+					</tr>
+				</table>
+				<div style="text-align:center; margin-top:20px;">
+					<input id="Button1" type="button" value="Verifica disponibilit&agrave;" onclick="validate();" />
+				</div>
+			</form>
+			<!--- Non rimuovere --->
+			<div class="copyright">
+				<img src="./logo_solo_small.png" alt="htlbooking.net" />
+				<a href="http://www.htlbooking.net" target="_blank">Htlbooking</a>
+			</div>
+			<!--- Non rimuovere --->
+
+        </div><script type="text/javascript">
+        jQuery.noConflict();
+
+		jQuery(document).ready(function(){
+			var windowsize = jQuery(window).width();
+            if (windowsize > 1113){
+				if (navigator.userAgent.indexOf('Chrome') == -1) {
+					jQuery.datepicker.setDefaults(jQuery.datepicker.regional[ "it" ]);
+					jQuery('#Text1').datepicker({dateFormat: 'dd/mm/yy'});
+					jQuery('#Text2').datepicker({dateFormat: 'dd/mm/yy'});
+				}
+
+			}
+
+
+        jQuery("#Text1").change(function () {
+            var str = document.getElementById("Text1").value.toString();
+            var dd = parseInt(str.substring(0, 2)); var mm = parseInt(str.substring(3, 5)); var yyyy = parseInt(str.substring(6, 10));
+            var st = mm + '/' + dd + '/' + yyyy;
+            var today = new Date(st); today.setDate(today.getDate() + 1); var dd1 = today.getDate(); var mm1 = today.getMonth() + 1; var yyyy1 = today.getFullYear();
+            if (dd1 < 10) { dd1 = '0' + dd1 } if (mm1 < 10) { mm1 = '0' + mm1 }
+            document.getElementById("Text2").value = dd1 + '/' + mm1 + '/' + yyyy1;
+        });
+	});
+	</script>
+</html>

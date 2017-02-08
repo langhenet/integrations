@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Barra</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.23.1" />
+
+	<script type='text/javascript' src='js/jquery.js'></script>
+	<script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+	<script type='text/javascript' src='js/jquery-ui.js'></script>
+	<link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link href="css/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/ui.datepicker.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/validate.js"></script>
+	<script type="text/javascript" src="js/ui.datepicker-it.js"></script>
+	<script type="text/javascript" src="js/ui.datepicker-en.js"></script>
+	<script type="text/javascript" src="js/ui.datepicker-fr.js"></script>
+	<script type="text/javascript" src="js/ui.datepicker-de.js"></script>
+
+
+	<script>
+		/* INSERIRE QUI IL CODICE HOTEL */
+		var codice_hotel='giesse-hotel';
+		var lingua = 'it';
+	</script>
+
+</head>
+
+<!-- <?
+$now = new DateTime('now');
+$oggi = $now->format("Y-m-d");
+$now->add(new DateInterval('P1D'));
+$domani = $now->format("Y-m-d");
+?> -->
+
+<body>
+
+</body>
+
+	<script>
+			function validate_responsive() {
+				if (document.getElementById('Text1_responsive').value == "" || document.getElementById('Text2_responsive').value == "") {
+					alert("Seleziona i campi nel calendario!");
+					return;
+				}
+				if (document.getElementById('Text3_responsive').value == "") {
+					alert("Seleziona il numero delle persone!");
+					return;
+				}
+				window.open('https://booking.htlbooking.net'+codice_hotel+'?dateA=' + document.getElementById('Text1_responsive').value + '&dateP=' + document.getElementById('Text2_responsive').value + '&adulti=' + document.getElementById('Text3_responsive').value + '&lingua=' + lingua);
+			}
+
+			jQuery(document).ready(function() {
+				 jQuery( "#widget-solutyon-booking-engine-dialog" ).dialog({
+						autoOpen: false,
+						title: "Prenotazione Online",
+						show: {
+							effect: "fade",
+							duration: 300
+						},
+						hide: {
+							effect: "fade",
+							duration: 300
+						}
+					});
+				jQuery( "#solutyon_booking_engine_button" ).click(function() {
+					jQuery( "#widget-solutyon-booking-engine-dialog" ).dialog( "open" );
+				});
+			});
+			</script>
+
+			<script>
+			function validate() {
+
+				if (document.getElementById('Text1').value == "" || document.getElementById('Text2').value == "") {
+					alert("Seleziona i campi nel calendario!");
+					return;
+				}
+				if (document.getElementById('Text3').value == "") {
+					alert("Seleziona il numero delle persone!");
+					return;
+				}
+				window.open('https://booking.htlbooking.net/'+codice_hotel+'?dateA=' + document.getElementById('Text1').value + '&dateP=' + document.getElementById('Text2').value + '&adulti=' + document.getElementById('Text3').value + '&lingua=' + lingua);
+			}
+		</script>
+		<style type="text/css">
+				body {margin-bottom:50px;}
+				.widget-solutyon-booking-engine-horizontal input[type="button"], .widget-solutyon-booking-engine input[type="button"] {
+					background: #60150F;
+				}
+				.widget-solutyon-booking-engine-horizontal input[type="button"]:hover, .widget-solutyon-booking-engine input[type="button"]:hover {
+					background: #3A0A06;
+				}
+				.widget-solutyon-booking-engine-horizontal, .widget-solutyon-booking-engine-button a, .widget-solutyon-booking-engine-horizontal .booking_form .prenotazione_title, .widget-solutyon-booking-engine-horizontal .booking_form input[type="button"], .widget-solutyon-booking-engine-horizontal .booking_form label, .widget-solutyon-booking-engine-horizontal .copyright a, .widget-solutyon-booking-engine-horizontal .copyright a:hover, .widget-solutyon-booking-engine-button a {
+					color: white !important;
+				}
+				.widget-solutyon-booking-engine .copyright a, .widget-solutyon-booking-engine .copyright a:hover {
+					color: #4B4B4B;
+				}
+			</style>
+		
+
+			<div class="widget-solutyon-booking-engine-button" style=""><a id="solutyon_booking_engine_button"><img src="./images/lines.png" style="float:left"/><span style="position:relative; left:-10px">Prenotazione Online</span></a></div>
+		<div class="widget-solutyon-booking-engine-horizontal" style="">
+			<form action="#" class="booking_form">
+				<div class="prenotazione_title">Prenotazione Online</div>
+				<label for="Text1">Data arrivo:</label><input id="Text1" type="text" />
+				<label for="Text2">Data partenza:</label><input id="Text2" type="text" />
+				<label for="Text3">Persone:</label><input id="Text3" type="text" style="width:35px" value="2"/>
+				<input id="Button1" type="button" value="Verifica disponibilit&agrave;" onclick="validate();" />
+
+			<!--- Non rimuovere -->
+
+			<!--- Non rimuovere --->
+			</form>
+        </div><script type="text/javascript">
+        jQuery.noConflict();
+
+		jQuery(document).ready(function(){
+			if (jQuery(".widget-solutyon-booking-engine-horizontal").css("display") != "none" ){
+				jQuery.datepicker.setDefaults(jQuery.datepicker.regional[ "it" ]);
+				jQuery('#Text1').datepicker({dateFormat: 'dd/mm/yy'});
+				jQuery('#Text2').datepicker({dateFormat: 'dd/mm/yy'});
+			}
+        });
+        jQuery("#Text1").change(function () {
+            var str = document.getElementById("Text1").value.toString();
+            var dd = parseInt(str.substring(0, 2)); var mm = parseInt(str.substring(3, 5)); var yyyy = parseInt(str.substring(6, 10));
+            var st = mm + '/' + dd + '/' + yyyy;
+            var today = new Date(st); today.setDate(today.getDate() + 1); var dd1 = today.getDate(); var mm1 = today.getMonth() + 1; var yyyy1 = today.getFullYear();
+            if (dd1 < 10) { dd1 = '0' + dd1 } if (mm1 < 10) { mm1 = '0' + mm1 }
+            document.getElementById("Text2").value = dd1 + '/' + mm1 + '/' + yyyy1;
+        });
+
+        jQuery("#Text1_responsive").change(function () {
+			var str = document.getElementById("Text1_responsive").value.toString();
+			var yyyy = parseInt(str.substring(0, 4)); var mm = parseInt(str.substring(5, 7)); var dd = parseInt(str.substring(8, 10));
+			var st = mm + '/' + dd + '/' + yyyy;
+			var today = new Date(st); today.setDate(today.getDate() + 1); var dd1 = today.getDate(); var mm1 = today.getMonth() + 1; var yyyy1 = today.getFullYear();
+			if (dd1 < 10) { dd1 = '0' + dd1 } if (mm1 < 10) { mm1 = '0' + mm1 }
+			document.getElementById("Text2_responsive").value = yyyy1 + '-' + mm1 + '-' + dd1;
+		});
+	</script>
+</html>
