@@ -65,3 +65,38 @@ div.widget {
     display: none;
   }
 }
+
+.widget .booking-calendar-page {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3em;
+}
+
+.widget .webcomponent-booking-calendar-inline {
+  max-width: 450px;
+  min-width: 350px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50%;
+}
+
+.datepicker-input,
+.datepicker-inline {
+
+}
+
+.widget .webcomponent-booking-items-list {
+  flex-basis: 50%;
+  background: rgba(1,1,1,0.3);
+}
+
+.widget .available-dates {
+  max-width: 450px;
+  min-width: 350px;
+  margin: 0 auto !important;
+}
+
+.widget .webcomponent-booking-items-list .available-dates .available-date-block .available-times ul .available-time {
+  background: transparent;
+}
