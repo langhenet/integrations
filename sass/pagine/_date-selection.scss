@@ -1,0 +1,436 @@
+html {
+  font-size: inherit;
+}
+body {
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+
+p {
+  margin-bottom: 1.5em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.widget {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0;
+  background-color: transparent;
+  min-height: auto;
+}
+
+div.widget {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 0;
+    padding: 0;
+    background-color: transparent;
+    min-height: auto;
+}
+
+.widget .widget-content {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  flex-basis: 75%;
+  flex-shrink: 1;
+  flex-grow: 1;
+
+  background-color:rgba(255, 255, 255, 0.35);
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  box-sizing: border-box;
+}
+
+.widget .widget-sidebar {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  flex-basis: 25%;
+  background-color: rgba(48,48,48, 0.35);
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  box-sizing: border-box;
+  min-width: 200px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 480px;
+}
+
+@media (max-width: 850px) {
+  .widget .widget-sidebar {
+    display: none;
+  }
+}
+
+///
+// LOGO + HEADER
+///
+.widget .logo img {
+  display: none;
+}
+
+
+
+//breadcrumnbs clearfix
+.widget .webcomponent-booking-navigation {
+  padding: 0;
+  margin-bottom: 0;
+  background: transparent;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.widget ul.clearfix {
+  display: block;
+  margin-top: 0;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 1.5em;
+}
+
+///
+// DIV BODY
+///
+div.body {
+  padding: 1.5em 0;
+}
+
+.widget .widget-content .heading {
+  padding: 0.75em 0;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+  background: rgba(255, 255, 255, 0.75);
+  height: auto;
+}
+
+
+.widget .widget-content .body {
+  padding: 1.5em 0 3em 0;
+}
+
+body.widget h1 {
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 0.75em 0.75em 0 0.75em;
+  background: rgba(48,48,48, 0.75);
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: -1.5em;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+
+  &.calendar-title a {
+    color: #fff;
+  }
+}
+
+body.widget h2 {
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 0 0.75em 0.75em 0.75em;
+  background: rgba(48,48,48, 0.75);
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+  margin-bottom: 0;
+}
+
+.widget .booking-calendar-page {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    align-items: stretch;
+}
+
+.widget .webcomponent-booking-calendar-inline {
+  max-width: 500px;
+  min-width: 400px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 70%;
+  background-color: rgba(255,255,255, 0.85);
+  padding: 1.5em;
+  margin-bottom: 0;
+}
+
+//DATA PRINCIPALE CALENDARIO
+body.widget .webcomponent-booking-calendar-inline .datepicker-input {
+  border-radius: 0;
+  padding: 1.5em 0;
+  color: #333;
+  text-align: center;
+  background: none;
+  font-size: 1.5em;
+  line-height: 1em;
+  font-weight: 300;
+}
+
+//HEADER DATEPICKER
+.webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker .ui-datepicker-header,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker-inline .ui-datepicker-header {
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1.5em;
+}
+
+//FRECCETTE datepicker
+.webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker .ui-datepicker-header .ui-icon,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker-inline .ui-datepicker-header .ui-icon {
+  background: url(http://img1.static.trekksoft.com/img.php?file=widget/black-arrow&oldcolor=000&newcolor=ce484f) 50% 50%;
+  background-repeat: no-repeat;
+  line-height: 1em;
+  font-size: 1.5em;
+  height: auto;
+}
+.webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker .ui-datepicker-header .ui-icon.ui-icon-circle-triangle-e,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker-inline .ui-datepicker-header .ui-icon.ui-icon-circle-triangle-e {
+  background-position: 0px 0px;
+}
+
+//Titolo datepicker
+.webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker .ui-datepicker-title,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker-inline .ui-datepicker-title  {
+  font-size: 1.25em;
+  line-height: 1.225em;
+}
+
+//calendario vero e proprio - sfond
+.ui-widget-content,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar,
+.ui-widget-content {
+  background: transparent;
+}
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar thead th,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar thead th,
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar tbody tr,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar tbody tr,
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable a,
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable span,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable a,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable span {
+  background: transparent;
+}
+
+////
+// TABELLA DATE PICKER
+////
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar {
+  font-size: 1em;
+}
+
+//THEAD
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar thead th,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar thead th {
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar tbody tr td,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar tbody tr td {
+  font-size: 1em;
+  padding: 0;
+  font-weight: 400;
+}
+
+//NON SELEZIONABILI
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable a,
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable span,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable a,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable span {
+  color: #000;
+  opacity: 0.3;
+  padding: 13px 0;
+}
+
+//SELEZIONABILI
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar tbody tr td a,
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar tbody tr td span,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar tbody tr td a,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar tbody tr td span {
+  padding: 13px 0;
+  opacity: 1;
+  color: #000;
+  font-weight: 400;
+  border-radius: 100%;
+  background: transparent;
+}
+
+//TODAY
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar tbody tr td.ui-datepicker-today a,
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar tbody tr td.ui-datepicker-today span,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar tbody tr td.ui-datepicker-today a,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar tbody tr td.ui-datepicker-today span {
+  padding: 13px 0;
+  border-radius: 100%;
+}
+
+//SELEZIONATO
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar tbody tr td.ui-datepicker-current-day a,
+.webcomponent-booking-calendar-inline #ui-datepicker-div .ui-datepicker-calendar tbody tr td.ui-datepicker-current-day span,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar tbody tr td.ui-datepicker-current-day a,
+.webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-datepicker-calendar tbody tr td.ui-datepicker-current-day span {
+  border-radius: 100%;
+}
+
+//DOPO CALENDARIO
+
+@media (min-width: 768px) { //nascondo i dati sopra i 768px
+  .webcomponent-booking-calendar-inline .after-calendar {
+    display: none;
+  }
+}
+///
+// Lista Orari
+////
+
+.widget .webcomponent-booking-items-list {
+  flex-basis: 30%;
+  background: rgba(48,48,48,0.75);
+  padding: 0 1.75em;
+  min-width: 420px;
+}
+
+.webcomponent-booking-items-list .available-dates .available-date-block {
+  padding: 1.5em 0;
+  margin: 0;
+}
+
+.widget .available-dates {
+  max-width: 450px;
+  min-width: 350px;
+  margin: 0 auto !important;
+}
+
+.webcomponent-booking-items-list .available-dates .available-date-block .date {
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1em;
+  padding: 1.5em 0;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.widget .webcomponent-booking-items-list .available-dates .available-date-block .available-times ul .available-time {
+  background: transparent;
+  border-top: 0;
+  border-bottom: 0;
+
+
+  a {
+    display: flex;
+    position: relative;
+    padding: 0.75em 0;
+    border-bottom: 1px solid #fff;
+
+    p {
+      color: #fff;
+      padding: 0;
+    }
+
+    p.time {
+      padding: 0;
+      color: #fff;
+    }
+
+    &>.time-arrow {
+      border: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+.webcomponent-booking-items-list .available-dates .available-date-block .available-times ul .available-time a p.time strong {
+  line-height: 1.5em;
+  margin-right: 1.5em;
+}
+
+
+////
+// Heading Sidebar
+///
+.widget .widget-sidebar .heading {
+  height: auto;
+  padding: 0.75em 0;
+  position: relative;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.widget .widget-sidebar .heading select.select-language {
+  height: 1.5em !important;
+  font-size: 1em !important;
+  margin: 0 auto !important;
+  z-index: 99999 !important;
+  top: 1.5em !important;
+  display: block !important;
+  left: 3.5em !important;
+}
+
+.widget .widget-sidebar .heading .select-language.customSelect {
+  border-radius: 0;
+  padding: 0.75em;
+  line-height: 1.5em;
+  margin: 0.70em auto;
+  max-width: 280px;
+  float: none;
+  display: block !important;
+  position: relative;
+  z-index: 0;
+  color: #000;
+}
+
+.customSelect .customSelectInner {
+  height: auto;
+  line-height: 1;
+  position: absolute;
+  top: 21%;
+}
+
+////
+// Body Sidebar
+///
+.widget .widget-sidebar .body {
+  padding: 1.5em 0;
+}
+
+////
+// Sidebar
+////
+.widget .widget-sidebar .body h2 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 0;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  text-transform: uppercase;
+  margin-top: -1.5em;
+}
+
+/////
+// LANGHE
+////
+#trekksoft-popup-popup {
+  background-color: transparent !important;
+  background-image: url(http://langhe.net/wp-content/uploads/2016/04/cuori-tavolo-san-valentino.jpg) !important;
+  background-size: cover;
+
+}

@@ -1,0 +1,38 @@
+body.widget h1.sub-header {
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+  display: block;
+  text-align: center;
+  float: none;
+  margin-bottom: 3em;
+  padding: 1.5em;
+}
+
+///
+// CONTENUTO CARRELLO
+///
+.webcomponent-booking-sidebar-cart {
+  width: 50%;
+  float: left;
+  display: block;
+  padding: 1.5em;
+  background: rgba(255,255,255,0.75);
+}
+
+body.widget .webcomponent-booking-sidebar-cart .body {
+
+}
+
+body.widget .webcomponent-booking-sidebar-cart .body .basket-item {
+  background: transparent;
+  margin-bottom: 1.5em;
+}
+
+.webcomponent-booking-sidebar-cart .body .basket-item .caption {
+  color: $nero-chiaro;
+  padding: 0;
+}
+
+.cart-summary.well {
+
+}

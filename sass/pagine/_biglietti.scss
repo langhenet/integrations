@@ -1,0 +1,110 @@
+
+
+//SOTTOTITOLO
+body.widget h3.sub-header {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000;
+  font-weight: 400;
+  background: rgba(255,255,255,0.75);
+  padding: 1.5em 0.75em 1.5em 0.75em;
+  max-width: 760px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+//contenitore prezzi
+.webcomponent-booking-price-categories {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0em 1.5em 3em 1.5em;
+  background: rgba(255,255,255,0.75);
+}
+
+body.widget .price-category.well {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 1.5em;
+}
+
+////
+// TABELLA PREZZI
+////
+//TR della tabella
+body.widget .webcomponent-booking-price-categories .price-category table.caption tbody tr {
+  background: transparent;
+}
+//TD del contatore
+body.widget .webcomponent-booking-price-categories .price-category table.caption tbody tr td.quantity {
+  position: relative;
+  padding-right: 1.5em;
+
+  select {
+    z-index: 9999;
+    width: 100% !important;
+    height: 1.5em !important;
+    font-size: 1em !important;
+  }
+  .customSelect {
+    position: relative;
+    padding: 0.75em 0.75em;
+    line-height: 1.5em;
+    background-position: 90% 50%;
+    background-color: #fff;
+    color: #000;
+
+    .customSelectInner {
+      top: 0;
+      line-height: 1.5em;
+    }
+  }
+}
+
+//TD TITOLO
+.webcomponent-booking-price-categories .price-category table.caption tbody td.title {
+  width: 55%;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $nero-chiaro;
+}
+
+//TD DESCRIZIONE
+.webcomponent-booking-price-categories .price-category table.caption tbody .description {
+  padding: 0 0 1.5em 0;
+  font-size: 1em;
+  color: $nero-chiaro;
+}
+
+//PREZZO
+.webcomponent-booking-price-categories .price-category table.caption tbody td.price {
+  color: $rosso;
+}
+
+//BOTTONE
+body.widget .webcomponent-booking-price-categories .sidebar-cart-buttons a {
+  margin: 1.5em 0 0 0;
+  background: #4CAF50;
+  padding: 0.75em 1.5em;
+}
+
+body.widget .button.continue {
+  line-height: 1.5em;
+}
+///
+//BOTTONE indietro
+///
+//contenitore
+body.widget .webcomponent-navigation-buttons.clearfix {
+  margin: 1.5em auto;
+  max-width: 350px;
+
+  .button-bordered {
+    border: 3px solid;
+    border-radius: 0;
+  }
+}
