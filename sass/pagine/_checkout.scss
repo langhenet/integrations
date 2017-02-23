@@ -11,28 +11,287 @@ body.widget h1.sub-header {
 ///
 // CONTENUTO CARRELLO
 ///
-.webcomponent-booking-sidebar-cart {
+body.widget .widget-content .webcomponent-booking-sidebar-cart {
   width: 50%;
   float: left;
   display: block;
-  padding: 1.5em;
+  padding: 3em;
   background: rgba(255,255,255,0.75);
+
+  @media (max-width: 990px) {
+    padding: 3em 1.5em;
+  }
+
+  @media (max-width: 768px) {
+    float: none;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+  }
 }
 
 body.widget .webcomponent-booking-sidebar-cart .body {
 
 }
 
-body.widget .webcomponent-booking-sidebar-cart .body .basket-item {
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .basket-item {
   background: transparent;
   margin-bottom: 1.5em;
 }
 
-.webcomponent-booking-sidebar-cart .body .basket-item .caption {
+//TITOLO ELEMENTO CARRELLO
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .basket-item .caption {
   color: $nero-chiaro;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+}
+//CONTENITORE DETTAGLI ELEMENTO CARRELLO
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .basket-item .details {
   padding: 0;
 }
 
-.cart-summary.well {
+//ELEMENTO CARRELLO
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .basket-item .details .details-list li {
+  margin-top: 0;
+}
 
+//DATA ELEMENTO CARRELLO
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .basket-item .details .details-list li.date {
+  padding: 0;
+  margin-top: 0;
+
+  .text.clearfix {
+    padding: 0;
+    color: #303030;
+
+    .title {
+      margin-bottom: 0em;
+    }
+  }
+}
+//OSPITI DEL CARRELLO
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .basket-item .details .details-list li.guest {
+  padding-left: 1.5em;
+  min-height: 30px;
+  margin-top: 0;
+
+  .text {
+    padding: 1em 0;;
+    font-size: 0.75em;
+    text-transform: uppercase;
+
+    .title {
+      margin-bottom: 0;
+    }
+  }
+
+  &:hover {
+    background: #fff;
+  }
+}
+
+//SUBTOTALE CARRELLO
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .basket-item .details .details-list li .subtotal {
+  padding: 0.75em 0 0 0;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: normal;
+
+  span {
+    margin-bottom: 0;
+  }
+}
+
+//CAPARRA
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .basket-item .details .details-list li .down-payment {
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: normal;
+}
+
+//TOTALE DEL CARRELLO
+body.widget .widget-content .body > .cart-summary.well {
+  background: transparent;
+  padding: 0;
+}
+
+
+//VOUCHER CARRELLO
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .cart-summary ul li {
+  margin-bottom: 1.5em;
+  padding: 0;
+}
+//VOUCHER FORM
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .cart-summary ul li input {
+  background: #fff;
+  border-radius: 0;
+  padding: 0.75em;
+  font-size: 1em;
+}
+
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .cart-summary td {
+  padding: 0;
+  vertical-align: middle;
+
+}
+
+//BOTTONE VOUCHER
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .cart-summary ul li .submit {
+  font-size: 1em;
+  line-height: 1.5em;
+  border-radius: 0;
+  border-color: $verde;
+  color: $verde;
+  border-width: 3px;
+  padding: 0.475em;
+
+  &:hover {
+    background: $verde;
+    color: #fff;
+  }
+}
+
+//TOTALE CARRELLO
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .cart-summary.well ul li.total {
+  font-size: 1em;
+  /* text-transform: uppercase; */
+  padding-top: 1.5em;
+  margin-bottom: 0;
+
+  &:last-of-type {
+    margin-bottom: 1.5em;
+  }
+
+  span {
+    padding: 0;
+  }
+}
+
+//TOTALE CAPARRA
+body.widget .widget-content .webcomponent-booking-sidebar-cart .body .cart-summary.well ul li.down-payment {
+
+  span {  padding: 0;
+    font-size: 0.75em;
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+////FORM CARRELLO
+body.widget .widget-content form>div {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  .well {
+    float: left;
+    width: 50%;
+    padding: 3em 3em 1.5em 3em;
+    background: rgba(48,48,48, 0.75);
+    color: #fff;
+    //text-align: center;
+    margin-bottom: 0;
+  }
+  .well.user-checkout-field {
+    float: right;
+    width: 50%;
+    background: rgba($nero-chiaro,0.75);
+    color: #fff;
+    padding: 3em 3em 1.5em 3em;
+    margin-bottom: 0;
+
+    @media (max-width: 990px) {
+      padding: 3em 1.5em 1.5em 1.5em;
+    }
+
+    @media (max-width: 768px) {
+      float: none;
+      margin: 0 auto;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    p:first-child {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    p:nth-child(2) {
+      text-align: center;
+      margin-bottom: 1.5em;
+
+      strong {
+        font-weight: normal;
+      }
+    }
+
+    input[type="email"] {
+      padding: 0.75em;
+      font-size: 1em;
+      background: #fff;
+      border-radius: 0;
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/// GATEWAY di PAGAMENTO + BOTTONE PAGA
+body.widget .widget-content form > .well {
+  background: rgba(48,48,48, 0.75);
+  width: 50%;
+  float: right;
+  padding: 0 3em 3em 3em;
+  color: #fff;
+
+  @media (max-width: 990px) {
+    padding: 3em 1.5em 1.5em 1.5em;
+  }
+
+  @media (max-width: 768px) {
+    float: none;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .well-gray {
+    color: $nero-chiaro;
+    margin: 0 auto !important;
+    padding: 1.5em;
+
+    .note {
+      margin-bottom: 0;
+      font-size: 0.75em;
+      line-height: 2em;
+    }
+  }
+
+  .terms-accept {
+    margin-top: 1.5em !important;
+    margin-bottom: 1.5em;
+    line-height: 1.5em;
+
+    .tos-note {
+      display: none;
+    }
+  }
+
+  .pay-button {
+    padding: 0.75em;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    background: $verde;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }

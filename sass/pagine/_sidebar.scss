@@ -1,0 +1,177 @@
+////
+// Heading Sidebar
+///
+.widget .widget-sidebar .heading {
+  height: auto;
+  padding: 0.75em 0;
+  position: relative;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+  background: rgba(255, 255, 255, 0.75);
+
+  @media (max-width: 1199px) {
+    height: 4.9em;
+  }
+
+  @media (max-width: 990px) {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    max-width: 500px;
+    min-width: 200px;
+    background: transparent;
+  }
+}
+
+.widget .widget-sidebar .heading select.select-language {
+  height: 1.5em !important;
+  font-size: 1em !important;
+  margin: 0 auto !important;
+  z-index: 99999 !important;
+  top: 1.5em !important;
+  display: block !important;
+  left: 3.5em !important;
+}
+
+.widget .widget-sidebar .heading .select-language.customSelect {
+  border-radius: 0;
+  padding: 0.75em;
+  line-height: 1.5em;
+  margin: 0.70em auto;
+  max-width: 280px;
+  float: none;
+  display: block !important;
+  position: relative;
+  z-index: 0;
+  color: #000;
+}
+
+body.widget .customSelect .customSelectInner {
+  height: auto;
+  line-height: 1;
+  position: absolute;
+  top: 21%;
+}
+
+////
+// Body Sidebar
+///
+.widget .widget-sidebar .body {
+  padding: 1.5em 0;
+}
+
+////
+// Sidebar
+////
+.widget .widget-sidebar .body h2 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 0;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  text-transform: uppercase;
+  margin-top: -1.5em;
+}
+
+.widget-sidebar .webcomponent-booking-sidebar-cart {
+  float: none;
+  width: auto;
+  padding: 0;
+  background: transparent;
+}
+
+body.widget .widget-sidebar .webcomponent-booking-sidebar-cart .body {
+  padding: 1.5em;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+  background: rgba(255,255,255,0.75);
+
+  .basket-item {
+    background: transparent;
+    margin-bottom: 0;
+
+    .caption {
+      padding: 1.5em 0 0 0;
+      font-size: 1em;
+      line-height: 1.5em;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    .details {
+      padding: 0;
+      margin-bottom: 1.5em;
+      border-top: 1px solid #111;
+
+      .details-list li {
+        padding: 0;
+
+        .text.subtotal {
+          padding: 1.5em 0 0 0;
+          text-transform: uppercase;
+
+          .title {
+            margin-bottom: 0;
+          }
+        }
+
+        .text.down-payment {
+          padding: 0;
+          text-transform: uppercase;
+          font-size: 0.75em;
+          font-weight: bold;
+        }
+      }
+
+      .details-list li.date {
+        padding: 0;
+
+        .text {
+          padding: 0;
+
+          .title {
+            margin: 0.75em 0;
+          }
+        }
+      }
+
+      .details-list li.guest {
+        padding: 0;
+        min-height: auto;
+        font-size: 0.75em;
+
+        .text {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+
+//BOTTONE CARRELLO SIDEBAR
+
+body.widget .widget-sidebar .webcomponent-booking-sidebar-cart .body .sidebar-cart-buttons a.continue {
+  background: $verde;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding-left: 0.75em;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+//BOTTONE TORNA INDIETRO SIDEBAR
+body.widget .widget-sidebar .button-bordered {
+  border-radius: 0;
+  margin-top: 1.5em;
+  color: #fff;
+  border-color: #fff;
+  border-width: 3px;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 0.375em;
+}

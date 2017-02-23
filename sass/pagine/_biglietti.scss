@@ -18,11 +18,15 @@ body.widget h3.sub-header {
 }
 
 //contenitore prezzi
-.webcomponent-booking-price-categories {
+body.widget .webcomponent-booking-price-categories {
   max-width: 760px;
   margin: 0 auto;
   padding: 0em 1.5em 3em 1.5em;
   background: rgba(255,255,255,0.75);
+
+  .guests .webcomponent-booking-guest-form-inline {
+    max-width: 100%;
+  }
 }
 
 body.widget .price-category.well {
@@ -66,7 +70,7 @@ body.widget .webcomponent-booking-price-categories .price-category table.caption
 }
 
 //TD TITOLO
-.webcomponent-booking-price-categories .price-category table.caption tbody td.title {
+body.widget .webcomponent-booking-price-categories .price-category table.caption tbody td.title {
   width: 55%;
   text-transform: uppercase;
   font-weight: 700;
@@ -74,14 +78,14 @@ body.widget .webcomponent-booking-price-categories .price-category table.caption
 }
 
 //TD DESCRIZIONE
-.webcomponent-booking-price-categories .price-category table.caption tbody .description {
+body.widget .webcomponent-booking-price-categories .price-category table.caption tbody .description {
   padding: 0 0 1.5em 0;
   font-size: 1em;
   color: $nero-chiaro;
 }
 
 //PREZZO
-.webcomponent-booking-price-categories .price-category table.caption tbody td.price {
+body.widget .webcomponent-booking-price-categories .price-category table.caption tbody td.price {
   color: $rosso;
 }
 
