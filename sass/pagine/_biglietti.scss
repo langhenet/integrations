@@ -110,5 +110,32 @@ body.widget .webcomponent-navigation-buttons.clearfix {
   .button-bordered {
     border: 3px solid;
     border-radius: 0;
+    color: #fff;
+
+    &.back.arrow {
+      line-height: 1.5em;
+      padding: 0.375em 1em;
+      font-size: 1em;
+
+      i {
+        height: 1.5em;
+        float: left;
+        margin-right: 10px;
+        margin-left: 10px;
+        background-image: url(http://img1.static.trekksoft.com/img.php?file=widget/white-arrow-reverse&newcolor=ffffff);
+        color: #fff;
+      }
+
+      &:hover i {
+        background-image: url(http://img1.static.trekksoft.com/img.php?file=widget/white-arrow-reverse&newcolor=484848)
+      }
+    }
+
+
+    &:hover {
+        color: #484848;
+        background: #fff;
+        border-color: #fff;
+    }
   }
 }

@@ -132,9 +132,9 @@ body.widget .webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datep
 }
 
 //FRECCETTE datepicker
-body.widget .webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker .ui-datepicker-header .ui-icon,
-body.widget .webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker-inline .ui-datepicker-header .ui-icon {
-  background: url(http://img1.static.trekksoft.com/img.php?file=widget/black-arrow&oldcolor=000&newcolor=ce484f) 50% 50%;
+body.widget .webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker .ui-datepicker-header .ui-datepicker-next .ui-icon,
+body.widget .webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker-inline .ui-datepicker-header .ui-datepicker-next .ui-icon {
+  background: url(http://img1.static.trekksoft.com/img.php?file=widget/black-arrow&oldcolor=000&newcolor=ce484f) 0px 0px;
   background-repeat: no-repeat;
   line-height: 1em;
   font-size: 1.5em;
@@ -143,6 +143,15 @@ body.widget .webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datep
 body.widget .webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker .ui-datepicker-header .ui-icon.ui-icon-circle-triangle-e,
 body.widget .webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker-inline .ui-datepicker-header .ui-icon.ui-icon-circle-triangle-e {
   background-position: 0px 0px;
+}
+
+body.widget .webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker .ui-datepicker-header .ui-datepicker-prev .ui-icon,
+body.widget .webcomponent-booking-calendar-inline .ui-datepicker-inline.ui-datepicker-inline .ui-datepicker-header .ui-datepicker-prev .ui-icon {
+  background: url(http://img1.static.trekksoft.com/img.php?file=widget/white-arrow-reverse&newcolor=ce484f) 0px 0px;
+  background-repeat: no-repeat;
+  line-height: 1em;
+  font-size: 1.5em;
+  height: auto;
 }
 
 //Titolo datepicker
@@ -297,7 +306,7 @@ body.widget .webcomponent-booking-items-list .available-dates .available-date-bl
 
     p {
       color: #fff;
-      padding: 0;
+      padding: 0 15px 0 0;
     }
 
     p.time {
@@ -308,6 +317,9 @@ body.widget .webcomponent-booking-items-list .available-dates .available-date-bl
     &>.time-arrow {
       border: 0;
       border-radius: 0;
+      right: 0;
+      margin-top: -0.89em;
+      padding: 17px 4px;
     }
   }
 }
