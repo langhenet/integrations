@@ -1,0 +1,109 @@
+body.widget .webcomponent-activity-details {
+
+  h1 {
+    font-size: 1em;
+    line-height: 1.5em;
+    padding: 1.5em;
+    background: rgba(48, 48, 48, 0.75);
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: -1.5em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    float: none;
+    max-width: 100%;
+  }
+
+  .wrapper-header-tour-detail .book-now-button-wrapper {
+    position: fixed;
+    padding: 0.75em;
+    border-radius: 0;
+    background-color: rgba(255,255,255,0.75);
+    top: 4.5em;
+    z-index: 999;
+    left: 0;
+
+    .book-now-price {
+      margin: 0.75em 0;
+
+      span,
+      strong {
+        font-size: 0.75em;
+      }
+    }
+    //bottoni
+    a.button {
+      width: auto;
+      border-radius: 0;
+      font-size: 1em;
+      text-transform: uppercase;
+      padding: 0.375em 0.75em;
+      line-height: 1.5em;
+
+      &.tour-detail-book {
+        background: $verde;
+
+        &.btn-inquiry {
+          background: $rosso;
+        }
+        i {
+          width: 1em;
+          height: 1em;
+          line-height: 1.5em;
+          top: 50%;
+          background-position: 0 50%;
+        }
+      }
+    }
+  }
+
+  //IMMAGINE
+  .tour-header-image {
+    max-width: 670px;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+  }
+
+  .shifted {
+    max-width: 670px;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    background: rgba(255,255,255,0.75);
+
+    .tabbed-content {
+      background: transparent;
+
+      .ul.clearfix {
+        margin-left: 0;
+        margin-right: auto;
+        position: relative;
+        top: 0;
+        margin-bottom: 1.5em;
+      }
+
+      .tabs-content {
+        background: transparent;
+        padding: 0;
+
+        h2 {
+          font-size: 1em;
+          padding: 1.5em;
+          line-height: 1.5em;
+        }
+
+        #map_wrapper {
+          margin: 0 -1.5em;
+        }
+      }
+    }
+    .tour-gallery.clearfix {
+      float: none;
+
+      &> div {
+        margin: 0.75em 0.75em 0.75em 0;
+      }
+    }
+  }
+}
