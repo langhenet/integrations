@@ -41,7 +41,7 @@ div.body {
 }
 
 div.widget {
-  height: 100%;
+  height: auto;
 }
 
 .widget .widget-content .heading {
@@ -256,6 +256,11 @@ body.widget .webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-date
     display: none;
   }
 }
+
+.webcomponent-booking-calendar-inline .after-calendar .arrow {
+  border-top: 30px solid rgba(255,255,255,0.75);
+  bottom: -4.35em;
+}
 ///
 // Lista Orari
 ////
@@ -269,10 +274,13 @@ body.widget .webcomponent-booking-calendar-inline .ui-datepicker-inline .ui-date
 
   @media (max-width: 768px) {
     margin: 0 auto;
-    min-width: 500px;
+    //min-width: 500px;
     flex-basis: 100%;
     flex-grow: 1;
     box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    min-width: 350px;
   }
 }
 
