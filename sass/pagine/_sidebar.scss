@@ -81,14 +81,18 @@ body.widget .customSelect .customSelectInner {
 }
 
 body.widget .widget-sidebar .webcomponent-booking-sidebar-cart .body {
-  padding: 1.5em;
-  margin-left: -1.5em;
-  margin-right: -1.5em;
-  background: rgba(255,255,255,0.75);
+//  padding: 1.5em;
+//  margin-left: -1.5em;
+//  margin-right: -1.5em;
+//  background: rgba(255,255,255,0.75);
 
   .basket-item {
-    background: transparent;
     margin-bottom: 0;
+    padding: 1.5em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    background: rgba(255,255,255,0.75);
+    border-radius: 0;
 
     .caption {
       padding: 1.5em 0 0 0;
@@ -146,6 +150,15 @@ body.widget .widget-sidebar .webcomponent-booking-sidebar-cart .body {
       }
     }
   }
+
+  .sidebar-cart-buttons {
+    padding: 1.5em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    background: rgba(255,255,255,0.75);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 
@@ -158,6 +171,8 @@ body.widget .widget-sidebar .webcomponent-booking-sidebar-cart .body .sidebar-ca
   padding-left: 0.75em;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 1.5em;
+  margin-top: 0;
 
   &:hover {
     opacity: 0.8;
